@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod3
+  labels:
+    app: webserver-3
+    environment: test
+    authorship: sunil
+spec:
+  containers:
+  - name: c1
+    image: nginx:latest
+    ports:
+    - containerPort: 80
