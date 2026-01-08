@@ -28,7 +28,7 @@ spec:
             name: mysvc-np-2
             port:
               number: 80
-  - host: website1.example.com
+  - host: website3.example.com
     http:
       paths:
       - pathType: Prefix
