@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydeployment
+spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-webserver
+  template:
+    metadata:
+      labels:
+        app: nginx-webserver
+        environment: demo
+        authorship: sunil
+    spec:
+      containers:
+      - name: c1
+        image: leaddevops/kubeserve:v1
