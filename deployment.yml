@@ -29,5 +29,3 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
-
-# added the content of replicaset.yaml to deployment.yaml as deployment is the higher level object which manages the replica set and the replica set manages the pods. so we can directly define the pod template in the deployment and it will create the replica set and the pods for us.
